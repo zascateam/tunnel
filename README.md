@@ -10,7 +10,7 @@
 <p>
   <img src="https://img.shields.io/badge/Go-1.22+-00ADD8?logo=go&logoColor=white" alt="Go 1.22+">
   <img src="https://img.shields.io/badge/Platform-Windows-0078D4?logo=windows&logoColor=white" alt="Windows">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
+  <img src="https://img.shields.io/badge/License-AGPL--3.0-blue.svg" alt="License: AGPL-3.0">
 </p>
 
 </div>
@@ -125,4 +125,4 @@ winrm_port: "127.0.0.1:5986"
 
 ## 许可证
 
-MIT License - 查看 [LICENSE](LICENSE) 文件了解详情。
+AGPL-3.0 License - 查看 [LICENSE](LICENSE) 文件了解详情。
