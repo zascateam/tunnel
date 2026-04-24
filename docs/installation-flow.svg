@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="system-ui,-apple-system,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="300" rx="12" fill="url(#bg)"/>
+  <text x="450" y="30" text-anchor="middle" fill="#f1f5f9" font-size="18" font-weight="700">隧道安装与连接流程</text>
+
+  <!-- 步骤1 -->
+  <g>
+    <rect x="30" y="55" width="190" height="90" rx="8" fill="#065f46" stroke="#10b981" stroke-width="1"/>
+    <text x="125" y="80" text-anchor="middle" fill="#6ee7b7" font-size="11" font-weight="700">1. 安装</text>
+    <text x="125" y="98" text-anchor="middle" fill="#94a3b8" font-size="9">zasca-tunnel.exe install</text>
+    <text x="125" y="113" text-anchor="middle" fill="#94a3b8" font-size="8">-token &lt;令牌&gt;</text>
+    <text x="125" y="126" text-anchor="middle" fill="#94a3b8" font-size="8">-server wss://网关:9000</text>
+  </g>
+
+  <!-- 步骤2 -->
+  <g>
+    <rect x="250" y="55" width="190" height="90" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+    <text x="345" y="80" text-anchor="middle" fill="#93c5fd" font-size="11" font-weight="700">2. 注册服务</text>
+    <text x="345" y="98" text-anchor="middle" fill="#94a3b8" font-size="9">创建Windows服务</text>
+    <text x="345" y="113" text-anchor="middle" fill="#94a3b8" font-size="8">开机自动启动</text>
+    <text x="345" y="126" text-anchor="middle" fill="#94a3b8" font-size="8">配置: C:\ProgramData\ZASCA</text>
+  </g>
+
+  <!-- 步骤3 -->
+  <g>
+    <rect x="470" y="55" width="190" height="90" rx="8" fill="#3b0764" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="565" y="80" text-anchor="middle" fill="#c4b5fd" font-size="11" font-weight="700">3. WSS连接</text>
+    <text x="565" y="98" text-anchor="middle" fill="#94a3b8" font-size="9">连接到网关</text>
+    <text x="565" y="113" text-anchor="middle" fill="#94a3b8" font-size="8">Token + Ed25519公钥</text>
+    <text x="565" y="126" text-anchor="middle" fill="#94a3b8" font-size="8">心跳30秒</text>
+  </g>
+
+  <!-- 步骤4 -->
+  <g>
+    <rect x="690" y="55" width="180" height="90" rx="8" fill="#78350f" stroke="#f59e0b" stroke-width="1"/>
+    <text x="780" y="80" text-anchor="middle" fill="#fde68a" font-size="11" font-weight="700">4. 就绪</text>
+    <text x="780" y="98" text-anchor="middle" fill="#94a3b8" font-size="9">隧道在线</text>
+    <text x="780" y="113" text-anchor="middle" fill="#94a3b8" font-size="8">RDP/WinRM/远程执行</text>
+    <text x="780" y="126" text-anchor="middle" fill="#94a3b8" font-size="8">所有通道已激活</text>
+  </g>
+
+  <!-- 箭头 -->
+  <line x1="220" y1="100" x2="248" y2="100" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="440" y1="100" x2="468" y2="100" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="660" y1="100" x2="688" y2="100" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 服务生命周期 -->
+  <rect x="30" y="170" width="840" height="110" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="450" y="195" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600">服务生命周期</text>
+
+  <g>
+    <rect x="60" y="215" width="120" height="40" rx="6" fill="#065f46"/>
+    <text x="120" y="240" text-anchor="middle" fill="#6ee7b7" font-size="10">安装</text>
+  </g>
+  <line x1="180" y1="235" x2="200" y2="235" stroke="#64748b" stroke-width="1" marker-end="url(#arr)"/>
+
+  <g>
+    <rect x="210" y="215" width="120" height="40" rx="6" fill="#1e3a5f"/>
+    <text x="270" y="240" text-anchor="middle" fill="#93c5fd" font-size="10">启动</text>
+  </g>
+  <line x1="330" y1="235" x2="350" y2="235" stroke="#64748b" stroke-width="1" marker-end="url(#arr)"/>
+
+  <g>
+    <rect x="360" y="215" width="120" height="40" rx="6" fill="#3b0764"/>
+    <text x="420" y="240" text-anchor="middle" fill="#c4b5fd" font-size="10">连接</text>
+  </g>
+  <line x1="480" y1="235" x2="500" y2="235" stroke="#64748b" stroke-width="1" marker-end="url(#arr)"/>
+
+  <g>
+    <rect x="510" y="215" width="120" height="40" rx="6" fill="#78350f"/>
+    <text x="570" y="240" text-anchor="middle" fill="#fde68a" font-size="10">运行中</text>
+  </g>
+
+  <!-- 重连循环 -->
+  <path d="M630,235 L650,235 L650,260 L510,260 L510,258" fill="none" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#arr)"/>
+  <text x="580" y="275" text-anchor="middle" fill="#f87171" font-size="8">断开后自动重连</text>
+
+  <!-- 卸载 -->
+  <g>
+    <rect x="690" y="215" width="150" height="40" rx="6" fill="#334155"/>
+    <text x="765" y="240" text-anchor="middle" fill="#94a3b8" font-size="10">卸载</text>
+  </g>
+  <line x1="630" y1="235" x2="688" y2="235" stroke="#64748b" stroke-width="1" marker-end="url(#arr)"/>
+</svg>
