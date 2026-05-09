@@ -19,9 +19,9 @@
 
 > **⚠️ 仓库已归档**
 >
-> 本仓库已停止维护并归档。所有功能（WSS 客户端、Windows 服务、远程执行等）已合并至 [gateway 仓库](../gateway)，隧道客户端源码现位于 `gateway/cmd/tunnel/` 目录。
+> 本仓库已停止维护并归档。所有功能（WSS 客户端、Windows 服务、远程执行等）已合并至 [gateway 仓库](https://github.com/2c2a/gateway)，隧道客户端源码现位于 `gateway/cmd/tunnel/` 目录。
 >
-> 请前往 👉 **[gateway](../gateway)** 获取最新代码和文档。
+> 请前往 👉 **[gateway](https://github.com/2c2a/gateway)** 获取最新代码和文档。
 
 ---
 

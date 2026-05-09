@@ -16,7 +16,7 @@
   <g>
     <rect x="30" y="55" width="190" height="90" rx="8" fill="#065f46" stroke="#10b981" stroke-width="1"/>
     <text x="125" y="80" text-anchor="middle" fill="#6ee7b7" font-size="11" font-weight="700">1. 安装</text>
-    <text x="125" y="98" text-anchor="middle" fill="#94a3b8" font-size="9">zasca-tunnel.exe install</text>
+    <text x="125" y="98" text-anchor="middle" fill="#94a3b8" font-size="9">2c2a-tunnel.exe install</text>
     <text x="125" y="113" text-anchor="middle" fill="#94a3b8" font-size="8">-token &lt;令牌&gt;</text>
     <text x="125" y="126" text-anchor="middle" fill="#94a3b8" font-size="8">-server wss://网关:9000</text>
   </g>

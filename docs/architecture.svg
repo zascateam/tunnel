@@ -146,7 +146,7 @@
   <g>
     <rect x="60" y="375" width="160" height="50" rx="6" fill="#78350f" stroke="#f59e0b" stroke-width="1"/>
     <text x="140" y="400" text-anchor="middle" fill="#fde68a" font-size="10" font-weight="600">RDP客户端</text>
-    <text x="140" y="415" text-anchor="middle" fill="#64748b" font-size="8">mstsc → rdp-xxx.zasca.com</text>
+    <text x="140" y="415" text-anchor="middle" fill="#64748b" font-size="8">mstsc → rdp-xxx.2c2a.com</text>
   </g>
   <line x1="220" y1="400" x2="248" y2="155" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arr)"/>
 </svg>
