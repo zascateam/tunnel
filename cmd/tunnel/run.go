@@ -15,7 +15,7 @@ func runService(configPath string) error {
 		return fmt.Errorf("failed to load config: %w", err)
 	}
 
-	slog.Info("ZASCA Tunnel starting",
+	slog.Info("2c2a Tunnel starting",
 		"server", cfg.Server,
 		"rdp", cfg.RDP,
 		"winrm", cfg.WinRM,
@@ -42,7 +42,7 @@ func runService(configPath string) error {
 
 	if err := client.Run(ctx); err != nil {
 		if ctx.Err() != nil {
-			slog.Info("ZASCA Tunnel stopped")
+			slog.Info("2c2a Tunnel stopped")
 			return nil
 		}
 		return fmt.Errorf("tunnel run error: %w", err)

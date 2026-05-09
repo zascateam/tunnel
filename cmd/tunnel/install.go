@@ -7,13 +7,13 @@ import (
 )
 
 const (
-	serviceName     = "ZASCA Edge Service"
-	serviceDisplay  = "ZASCA Edge Service"
-	serviceDesc     = "Provides secure tunnel connectivity for ZASCA cloud desktop management platform"
-	installDir      = `C:\Program Files\ZASCA`
-	configDir       = `C:\ProgramData\ZASCA`
+	serviceName     = "2c2a Edge Service"
+	serviceDisplay  = "2c2a Edge Service"
+	serviceDesc     = "Provides secure tunnel connectivity for 2c2a cloud desktop management platform"
+	installDir      = `C:\Program Files\2c2a`
+	configDir       = `C:\ProgramData\2c2a`
 	configFile      = `tunnel.yaml`
-	serviceBinary   = `zasca-tunnel.exe`
+	serviceBinary   = `2c2a-tunnel.exe`
 )
 
 func runInstall(token, server string) error {
@@ -36,7 +36,7 @@ func runInstall(token, server string) error {
 		return fmt.Errorf("failed to install service: %w", err)
 	}
 
-	fmt.Println("ZASCA Edge Service installed successfully")
+	fmt.Println("2c2a Edge Service installed successfully")
 	fmt.Printf("Config written to: %s\n", cfgPath)
 	fmt.Println("Service will auto-start on boot")
 	return nil
@@ -50,6 +50,6 @@ func runUninstall() error {
 	cfgPath := filepath.Join(configDir, configFile)
 	os.Remove(cfgPath)
 
-	fmt.Println("ZASCA Edge Service uninstalled successfully")
+	fmt.Println("2c2a Edge Service uninstalled successfully")
 	return nil
 }
