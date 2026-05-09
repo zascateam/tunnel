@@ -16,11 +16,11 @@ func main() {
 
 	switch os.Args[1] {
 	case "version":
-		fmt.Printf("zasca-tunnel %s\n", Version)
+		fmt.Printf("2c2a-tunnel %s\n", Version)
 	case "install":
 		installCmd := flag.NewFlagSet("install", flag.ExitOnError)
-		token := installCmd.String("token", "", "tunnel token from ZASCA platform")
-		server := installCmd.String("server", "", "gateway server address (e.g., wss://gateway.zasca.com:9000)")
+		token := installCmd.String("token", "", "tunnel token from 2c2a platform")
+		server := installCmd.String("server", "", "gateway server address (e.g., wss://gateway.2c2a.com:9000)")
 		installCmd.Parse(os.Args[2:])
 
 		if *token == "" || *server == "" {
@@ -36,7 +36,7 @@ func main() {
 
 	case "run":
 		runCmd := flag.NewFlagSet("run", flag.ExitOnError)
-		configPath := runCmd.String("config", "C:\\ProgramData\\ZASCA\\tunnel.yaml", "config file path")
+		configPath := runCmd.String("config", "C:\\ProgramData\\2c2a\\tunnel.yaml", "config file path")
 		runCmd.Parse(os.Args[2:])
 
 		if err := runService(*configPath); err != nil {
@@ -57,7 +57,7 @@ func main() {
 }
 
 func printUsage() {
-	fmt.Println("ZASCA Tunnel - Edge Service")
+	fmt.Println("2c2a Tunnel - Edge Service")
 	fmt.Printf("Version: %s\n", Version)
 	fmt.Println()
 	fmt.Println("Commands:")
@@ -67,7 +67,7 @@ func printUsage() {
 	fmt.Println("  uninstall - Uninstall the Windows service")
 	fmt.Println()
 	fmt.Println("Usage:")
-	fmt.Println("  zasca-tunnel.exe install -token <TOKEN> -server <WSS_URL>")
-	fmt.Println("  zasca-tunnel.exe run -config <PATH>")
-	fmt.Println("  zasca-tunnel.exe uninstall")
+	fmt.Println("  2c2a-tunnel.exe install -token <TOKEN> -server <WSS_URL>")
+	fmt.Println("  2c2a-tunnel.exe run -config <PATH>")
+	fmt.Println("  2c2a-tunnel.exe uninstall")
 }

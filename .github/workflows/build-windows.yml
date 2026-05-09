@@ -35,14 +35,14 @@ jobs:
           CGO_ENABLED: 0
         run: |
           go build -ldflags="-s -w -X main.Version=${GITHUB_REF_NAME}" \
-            -o ../dist/zasca-tunnel-${{ matrix.goos }}-${{ matrix.goarch }}.exe \
+            -o ../dist/2c2a-tunnel-${{ matrix.goos }}-${{ matrix.goarch }}.exe \
             ./cmd/tunnel/
 
       - name: Upload artifact
         uses: actions/upload-artifact@v6
         with:
-          name: zasca-tunnel-${{ matrix.goos }}-${{ matrix.goarch }}
-          path: dist/zasca-tunnel-${{ matrix.goos }}-${{ matrix.goarch }}.exe
+          name: 2c2a-tunnel-${{ matrix.goos }}-${{ matrix.goarch }}
+          path: dist/2c2a-tunnel-${{ matrix.goos }}-${{ matrix.goarch }}.exe
           retention-days: 90
 
   release:

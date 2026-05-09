@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>ZASCA Tunnel</h1>
+<h1>2c2a Tunnel</h1>
 
 <p>
   <strong>边缘代理 — Windows 服务 + WSS 客户端 + 多路复用</strong><br>
@@ -17,11 +17,19 @@
 
 ---
 
+> **⚠️ 仓库已归档**
+>
+> 本仓库已停止维护并归档。所有功能（WSS 客户端、Windows 服务、远程执行等）已合并至 [gateway 仓库](../gateway)，隧道客户端源码现位于 `gateway/cmd/tunnel/` 目录。
+>
+> 请前往 👉 **[gateway](../gateway)** 获取最新代码和文档。
+
+---
+
 ## 架构概览
 
 ![Tunnel Architecture](./docs/architecture.svg)
 
-zasca-tunnel 运行在被管的 Windows 主机上，通过 WSS 隧道连接到 Gateway，提供：
+2c2a-tunnel 运行在被管的 Windows 主机上，通过 WSS 隧道连接到 Gateway，提供：
 
 | 通道 | 代码 | 说明 |
 |------|------|------|
@@ -37,27 +45,27 @@ zasca-tunnel 运行在被管的 Windows 主机上，通过 WSS 隧道连接到 G
 ### 安装为 Windows 服务
 
 ```bash
-zasca-tunnel.exe install \
+2c2a-tunnel.exe install \
   -token <TOKEN> \
   -server wss://gateway.example.com:9000
 ```
 
 安装后自动：
-- 创建 Windows 服务（`ZASCA Edge Service`）
+- 创建 Windows 服务（`2c2a Edge Service`）
 - 设置开机自启（`Auto Start`）
-- 写入配置到 `C:\ProgramData\ZASCA\tunnel.yaml`
+- 写入配置到 `C:\ProgramData\2c2a\tunnel.yaml`
 - 立即启动服务
 
 ### 查看版本
 
 ```bash
-zasca-tunnel.exe version
+2c2a-tunnel.exe version
 ```
 
 ### 卸载
 
 ```bash
-zasca-tunnel.exe uninstall
+2c2a-tunnel.exe uninstall
 ```
 
 ## 项目结构
@@ -92,15 +100,15 @@ git push origin tunnel/v1.0.0
 ```
 
 自动生成：
-- `zasca-tunnel-windows-amd64.exe`
-- `zasca-tunnel-windows-arm64.exe`
+- `2c2a-tunnel-windows-amd64.exe`
+- `2c2a-tunnel-windows-arm64.exe`
 - `checksums-sha256.txt`
 - GitHub Release（含版本说明）
 
 ## 安全特性
 
 - **Ed25519 密钥交换**：每次连接自动生成临时密钥对，公钥发送给 Gateway
-- **Token 认证**：每个主机使用唯一 Token，由 ZASCA 平台生成
+- **Token 认证**：每个主机使用唯一 Token，由 2c2a 平台生成
 - **TLS 加密**：WSS 连接全程 TLS 加密
 - **签名验证**：RemoteExec 支持命令签名验证（防篡改）
 - **SYSTEM 权限**：以 Windows 服务运行，拥有完整系统权限
@@ -114,7 +122,7 @@ git push origin tunnel/v1.0.0
 
 ## 配置文件
 
-`C:\ProgramData\ZASCA\tunnel.yaml`：
+`C:\ProgramData\2c2a\tunnel.yaml`：
 
 ```yaml
 token: "your-tunnel-token"

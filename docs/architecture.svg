@@ -27,7 +27,7 @@
   </defs>
 
   <rect width="900" height="480" rx="12" fill="url(#bg)"/>
-  <text x="450" y="35" text-anchor="middle" fill="#f1f5f9" font-size="20" font-weight="700">ZASCA隧道 — 边缘代理架构</text>
+  <text x="450" y="35" text-anchor="middle" fill="#f1f5f9" font-size="20" font-weight="700">2c2a隧道 — 边缘代理架构</text>
 
   <!-- 云端区域 -->
   <rect x="30" y="55" width="400" height="400" rx="12" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.3"/>
